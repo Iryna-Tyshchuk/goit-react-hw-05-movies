@@ -1,16 +1,19 @@
+import { Layout } from 'layout/Layout/Layout';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Home, MovieDetails, Movies } from 'views';
+import { routes } from '../routes';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path={routes.HOME} element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path={routes.MOVIES} element={<Movies />} />
+          <Route path={routes.MOVIE_ID} element={<MovieDetails />} />
+        </Route>
+        <Route path="*" element={<Navigate to={routes.HOME} />} />
+      </Routes>
     </div>
   );
 };
