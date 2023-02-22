@@ -1,6 +1,3 @@
-// import { CocktailsList } from "../components/CocktailsList";
-// import { Section } from "../components/Section";
-
 import { getTrendingMovies } from 'api/movie-service';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
@@ -16,7 +13,7 @@ export const Home = () => {
       try {
         setLoading(true);
         const data = await getTrendingMovies();
-        console.log(data);
+
         setMovies(data);
         setError(null);
       } catch (error) {

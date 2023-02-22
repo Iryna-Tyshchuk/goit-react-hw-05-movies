@@ -14,7 +14,6 @@ export const MovieInfo = ({
 }) => {
   const normalizedVote = vote_average.toFixed(1);
   const genresStr = genres.map(el => el.name).join(', ');
-  console.log(genresStr);
   return (
     <>
       <div>

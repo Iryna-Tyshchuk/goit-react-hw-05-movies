@@ -1,18 +1,11 @@
-import {
-  useParams,
-  useLocation,
-  Routes,
-  NavLink,
-  Route,
-} from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { routes } from '../routes';
 import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { getMovieDetail } from 'api/movie-service';
-import { Reviews } from 'components/Reviews/Reviews';
-import { Cast } from 'components/Cast/Cast';
+
 // import { getCocktailDetail } from "../api/cocktail-service";
 
 export const MovieDetails = () => {
@@ -47,16 +40,9 @@ export const MovieDetails = () => {
       <h3>CocktailDetail</h3>
       <GoBackBtn path={backPath} />
       {movie && <MovieInfo {...movie} />}
-
-      <NavLink to={'cast'}>Cast</NavLink>
-      <NavLink to={'reviews'}>Reviews</NavLink>
-
-      <Routes>
-        <Route path="cast" element={<Cast />} />
-        <Route path="reviews" element={<Reviews />} />
-      </Routes>
       {error !== null && <p>Oops, some error occured... Message: {error}</p>}
       {loading && <Loader />}
+      <Outlet />
     </>
   );
 };
