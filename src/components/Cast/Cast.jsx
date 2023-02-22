@@ -26,7 +26,9 @@ export const Cast = () => {
 
   return (
     <div>
-      {!!cast?.length && (
+      {cast.length === 0 ? (
+        <p>Sorry we haven't actors</p>
+      ) : (
         <ul>
           {cast.map(({ id, name, character, profile_path }) => {
             const poster = profile_path

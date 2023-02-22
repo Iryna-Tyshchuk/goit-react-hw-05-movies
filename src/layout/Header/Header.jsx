@@ -1,6 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
 import { routes } from '../../routes';
-// import styles from './Header.module.css';
 
 const menu = [
   { id: 'home', name: 'home', route: routes.HOME },

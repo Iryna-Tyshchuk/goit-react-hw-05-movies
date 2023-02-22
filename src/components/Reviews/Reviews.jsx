@@ -26,7 +26,9 @@ export const Reviews = () => {
 
   return (
     <div>
-      {!!reviews?.length && (
+      {reviews.length === 0 ? (
+        <p>Sorry we haven't reviews</p>
+      ) : (
         <ul>
           {reviews.map(({ id, author, content }) => {
             return (
