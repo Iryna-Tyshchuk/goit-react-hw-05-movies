@@ -1,13 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { routes } from '../routes';
+import { routes } from '../../routes';
 import { Layout } from 'layout/Layout/Layout';
 import { Home, MovieDetails, Movies } from 'views';
-import { Cast } from './Cast/Cast';
-import { Reviews } from './Reviews/Reviews';
+import { Cast } from '../Cast/Cast';
+import { Reviews } from '../Reviews/Reviews';
+import { GlobalStyle } from 'styles/GlobalStyle';
+import { StyledApp } from './App.styled';
 
 export const App = () => {
   return (
-    <div>
+    <StyledApp>
       <Routes>
         <Route path={routes.HOME} element={<Layout />}>
           <Route index element={<Home />} />
@@ -19,6 +21,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<Navigate to={routes.HOME} />} />
       </Routes>
-    </div>
+      <GlobalStyle />
+    </StyledApp>
   );
 };
