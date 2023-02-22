@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useLocation, Outlet } from 'react-router-dom';
+import { useParams, useLocation, Outlet, NavLink } from 'react-router-dom';
 import { routes } from '../routes';
 import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
@@ -40,6 +40,12 @@ export const MovieDetails = () => {
       {movie && <MovieInfo {...movie} />}
       {error !== null && <p>Oops, some error occured... Message: {error}</p>}
       {loading && <Loader />}
+      <NavLink to={'cast'} state={{ from: backPath }}>
+        Cast
+      </NavLink>
+      <NavLink to={'reviews'} state={{ from: backPath }}>
+        Reviews
+      </NavLink>
       <Outlet />
     </>
   );

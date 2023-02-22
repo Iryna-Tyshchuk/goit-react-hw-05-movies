@@ -1,28 +1,30 @@
-// import { formatDate } from '../helpers/formatDate';
 // import PropTypes from 'prop-types';
 
 export const MovieInfo = ({
   //   id,
   title,
   vote_average,
-  //   vote_count,
-  //   popularity,
-  //   original_title,
+  release_date,
+  original_title,
   overview,
   genres,
   poster_path,
 }) => {
   const normalizedVote = vote_average.toFixed(1);
   const genresStr = genres.map(el => el.name).join(', ');
+  const poster = poster_path
+    ? `https://image.tmdb.org/t/p/w300${poster_path}`
+    : 'https://via.placeholder.com/395x574?text=Sorry+No+Poster';
+  const date = new Date(release_date);
+  const releaseYear = date.getFullYear();
   return (
     <>
       <div>
-        <img
-          src={`https://image.tmdb.org/t/p/w300${poster_path}`}
-          alt={title}
-        />
+        <img src={poster} alt={title} />
       </div>
-
+      <h3>
+        {original_title}({releaseYear})
+      </h3>
       <div>User Score: {normalizedVote}</div>
       <div>Overview: {overview}</div>
       <div>Genres: {genresStr}</div>
