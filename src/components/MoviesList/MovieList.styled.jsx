@@ -11,9 +11,7 @@ export const StyledMovieList = styled.ul`
     transition: all 250ms linear;
     &:hover,
     &:focus {
-      transform: scale(1.01);
-      padding: 5px;
-      box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 5px 15px 10px rgba(36, 34, 34, 0.1);
       border-radius: 5px;
     }
     @media screen and (min-width: 768px) {
@@ -24,6 +22,18 @@ export const StyledMovieList = styled.ul`
       width: calc((100% - 60px) / 3);
       column-gap: 16px;
       row-gap: 32px;
+    }
+  }
+
+  & img {
+    border-radius: 5px;
+    /* 
+    @media screen and (min-width: 768px) {
+      height: 455px;
+    } */
+
+    @media screen and (min-width: 1280px) {
+      height: 574px;
     }
   }
 `;

@@ -6,7 +6,7 @@ import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { getMovieDetail } from 'api/movie-service';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -50,3 +50,4 @@ export const MovieDetails = () => {
     </>
   );
 };
+export default MovieDetails;

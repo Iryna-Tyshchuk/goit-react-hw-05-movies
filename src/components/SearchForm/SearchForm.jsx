@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
+import { Input, Wrapper } from './SearchForm.styled';
 
 export const SearchForm = () => {
   const [, setSearchParams] = useSearchParams();
@@ -11,12 +12,12 @@ export const SearchForm = () => {
   };
 
   return (
-    <div>
+    <Wrapper>
       <form onSubmit={onSubmit}>
-        <input type="text" placeholder="Enter name of movie..." name="query" />
+        <Input type="text" placeholder="Enter name of movie..." name="query" />
 
         <button type="submit">Search</button>
       </form>
-    </div>
+    </Wrapper>
   );
 };

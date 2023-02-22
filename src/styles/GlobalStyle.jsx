@@ -43,9 +43,9 @@ footer{
   }
   img {
   display: block;
-  max-width: 30%;
+  max-width: 100%;
   height: auto;
-  width: 30%;
+  width: 100%;
 }
 
 `;

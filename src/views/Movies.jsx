@@ -5,7 +5,7 @@ import { SearchForm } from 'components/SearchForm/SearchForm';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { searchFilmsByQuery } from 'api/movie-service';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -43,3 +43,4 @@ export const Movies = () => {
     </>
   );
 };
+export default Movies;
