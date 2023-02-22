@@ -37,7 +37,7 @@ export const MovieDetails = () => {
 
   return (
     <>
-      <h3>CocktailDetail</h3>
+      <h3>Movie Detail</h3>
       <GoBackBtn path={backPath} />
       {movie && <MovieInfo {...movie} />}
       {error !== null && <p>Oops, some error occured... Message: {error}</p>}
