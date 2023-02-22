@@ -27,9 +27,11 @@ export const NavUl = styled.ul`
   flex-direction: row;
 `;
 
-export const Logo = styled.p`
+export const Logo = styled(NavLink)`
   font-weight: 700;
   margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -38,6 +40,7 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  text-transform: uppercase;
 
   &.active {
     color: white;

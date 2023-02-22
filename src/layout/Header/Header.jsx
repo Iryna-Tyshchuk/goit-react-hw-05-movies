@@ -15,9 +15,9 @@ const menu = [
 export const Header = () => {
   return (
     <StyledHeader>
-      <StyledLink to={routes.HOME}>
+      <Logo to={routes.HOME}>
         <Logo>Movies App</Logo>
-      </StyledLink>
+      </Logo>
 
       <nav>
         <NavUl>
