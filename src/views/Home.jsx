@@ -1,7 +1,7 @@
-import { getTrendingMovies } from 'api/movie-service';
+import { useEffect, useState } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
-import { useEffect, useState } from 'react';
+import { getTrendingMovies } from 'api/movie-service';
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +13,6 @@ export const Home = () => {
       try {
         setLoading(true);
         const data = await getTrendingMovies();
-
         setMovies(data);
         setError(null);
       } catch (error) {

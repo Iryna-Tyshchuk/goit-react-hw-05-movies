@@ -1,12 +1,10 @@
-import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { routes } from '../routes';
 import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { getMovieDetail } from 'api/movie-service';
-
-// import { getCocktailDetail } from "../api/cocktail-service";
 
 export const MovieDetails = () => {
   const [movie, setMovie] = useState(null);

@@ -1,7 +1,7 @@
-import { Layout } from 'layout/Layout/Layout';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Home, MovieDetails, Movies } from 'views';
 import { routes } from '../routes';
+import { Layout } from 'layout/Layout/Layout';
+import { Home, MovieDetails, Movies } from 'views';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
 
