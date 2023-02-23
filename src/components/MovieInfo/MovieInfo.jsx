@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const MovieInfo = ({
   //   id,
@@ -30,4 +30,15 @@ export const MovieInfo = ({
       <div>Genres: {genresStr}</div>
     </>
   );
+};
+
+MovieInfo.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  vote_average: PropTypes.number.isRequired,
+  release_date: PropTypes.string.isRequired,
+  original_title: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  genres: PropTypes.array.isRequired,
+  poster_path: PropTypes.string.isRequired,
 };

@@ -1,5 +1,5 @@
 import { ThreeDots } from 'react-loader-spinner';
-import { StyledOverlay } from 'components/Modal/Modal.styled';
+import { StyledOverlay } from './Overlay.styled';
 
 export const Loader = () => {
   return (

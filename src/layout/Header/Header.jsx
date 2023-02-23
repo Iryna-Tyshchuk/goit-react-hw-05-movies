@@ -1,4 +1,3 @@
-// import { NavLink, Link } from 'react-router-dom';
 import { routes } from '../../routes';
 import {
   Logo,

@@ -51,16 +51,5 @@ export const getMovieReviews = async movieId => {
     `${BASE_URL}movie/${movieId}/reviews?api_key=${API_KEY}`
   );
   const { data } = response;
-  // const { id, results } = data;
   return data.results;
 };
-
-// export const getTrendingCocktails = () => {
-//   return Promise.all(
-//     urls.map(async (url) => {
-//       const { data } = await axios.get(url);
-//       const { strDrinkThumb, strDrink, strGlass, idDrink } = data.drinks[0];
-//       return { strDrinkThumb, strDrink, strGlass, idDrink };
-//     })
-//   );
-// };
